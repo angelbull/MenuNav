@@ -1,0 +1,59 @@
+.menunav {
+    background-color: #004466; /* Establece el fondo del menú en un azul oscuro */
+    font-family: Arial, sans-serif; /* Usa Arial o una fuente sans-serif en su defecto */
+    display: flex; /* Usa flexbox para organizar los elementos internos */
+    justify-content: center; /* Centra el menú horizontalmente en la pantalla */
+    padding: 10px 0; /* Agrega espacio arriba y abajo para mejorar la apariencia */
+}
+
+.menu ul {
+    list-style: none; /* Elimina los estilos de lista (puntos, números) */
+    padding: 0; /* Elimina el relleno predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+    background: #005580; /* Establece un fondo azul medio para el menú principal */
+    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos dentro del menú */
+}
+
+.menu ul li {
+    position: relative; /* Permite posicionar los submenús de forma absoluta dentro de este elemento */
+}
+
+.menu ul li a {
+    display: block; /* Hace que el enlace ocupe todo el espacio del <li> */
+    padding: 15px 20px; /* Agrega espacio alrededor del texto para facilitar la interacción */
+    color: #f0f0f0; /* Establece el color del texto en un blanco grisáceo */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.menu ul li:hover {
+    background: #0077aa; /* Cambia el color de fondo a un azul claro cuando el cursor pasa sobre el elemento */
+}
+
+.menu ul ul {
+    position: absolute; /* Hace que el submenú se superponga al contenido */
+    top: 100%; /* Ubica el submenú justo debajo del elemento padre */
+    left: 0; /* Alinea el submenú con el lado izquierdo del elemento padre */
+    background: #006699; /* Establece un fondo azul intermedio para los submenús */
+    display: none; /* Oculta el submenú por defecto */
+    flex-direction: column; /* Hace que los elementos del submenú se apilen verticalmente */
+    width: 150px; /* Define el ancho del submenú */
+}
+
+.menu ul ul li {
+    width: 100%; /* Hace que cada elemento del submenú ocupe todo el ancho disponible */
+}
+
+.menu ul li:hover > ul {
+    display: block; /* Muestra el submenú cuando el usuario pasa el cursor sobre el elemento padre */
+}
+
+.menu ul ul li a {
+    padding: 10px; /* Agrega espacio interno para mejorar la legibilidad */
+    color: #ffffff; /* Cambia el color del texto a blanco puro */
+    display: block; /* Asegura que los enlaces ocupen todo el ancho disponible */
+}
+
+.menu ul ul li:hover {
+    background: #0099cc; /* Cambia el color de fondo a un azul vibrante cuando el cursor pasa sobre un elemento del submenú */
+}
